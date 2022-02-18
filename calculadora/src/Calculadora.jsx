@@ -21,6 +21,22 @@ export default function Calculadora() {
         
     }
 
+    function calc() {
+        if(operator="/"){
+            setNum(parseNumber(oldnum) / parserNumber(num));
+        }
+        else if(operator="*"){
+            setNum(parseNumber(oldnum)  * parserNumber(num));
+        }
+
+        else if(operator="+"){
+            setNum(parseNumber(oldnum) + parseNumber(num));
+        }
+        else if(operator="-"){
+            setNum(parseNumber(oldnum) - parseNumber(num));
+        }
+    }
+
     function porcentagem() {
         setNum(num/100)
     }
@@ -44,24 +60,24 @@ export default function Calculadora() {
         <button onClick = {clear}>C</button>
         <button>()</button>
         <button onClick={porcentagem}>%</button>
-        <button>/</button>
+        <button onClick={calc}>/</button>
         </div>
         <div className="wrapper">
         <button onClick={inputNum}>7</button>
         <button onClick={inputNum}>8</button>
         <button onClick={inputNum}>9</button>
-        <button>X</button>
+        <button onClick={calc}>X</button>
         </div>
         <div className="wrapper">
         <button onClick={inputNum}>1</button>
         <button onClick={inputNum}>2</button>
         <button onClick={inputNum}>3</button>
-        <button>+</button>
+        <button onClick={calc}>+</button>
         </div>
         <div className="Wrapper">
         <button onClick={operatorHandler}>+/-</button>
         <button onClick={inputNum}>0</button>
-        <button>,</button>
+        <button onClick={calc}>-</button>
         <button>=</button>
         </div
         </Container>
