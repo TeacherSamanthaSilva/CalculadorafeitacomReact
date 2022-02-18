@@ -12,7 +12,23 @@ export default function Calculadora() {
     function inputNum(valor) {
         setNum(valor)
         var input = e.target.value
+        if(input == 0){
+            setNum(input)
+        }else{
+            
         setNum(num + input)
+        }
+        
+    }
+
+    function porcentagem() {
+        setNum(num/100)
+    }
+
+    function operatorHandler(params) {
+        if(num > 0){
+            setNum(-num)
+        }
     }
 
     function clear(e) {
@@ -23,9 +39,9 @@ export default function Calculadora() {
         <Box>
         <Container maxWidth="xs">
         <div className="wrapper">
-        <button>C</button>
+        <button onClick = {clear}>C</button>
         <button>()</button>
-        <button>%</button>
+        <button onClick={porcentagem}>%</button>
         <button>/</button>
         </div>
         <div className="wrapper">
@@ -41,11 +57,11 @@ export default function Calculadora() {
         <button>+</button>
         </div>
         <div className="Wrapper">
-        <button>+/-</button>
+        <button onClick={operatorHandler}>+/-</button>
         <button>0</button>
         <button>,</button>
         <button>=</button>
-        </div>
+        </div
         </Container>
         </Box>
     )
