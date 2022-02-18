@@ -1,32 +1,40 @@
 import React from 'react'
 import './Calculadora.css'
+import CssBaseline from '@mui/material/CssBaseline';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 
 
 export default function Calculadora() {
     return (
-        <div>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>+</button>
+        <h1 className="Resultado"></h1>
+        <Box>
+        <Container maxWidth="xs">
+        <div className="wrapper">
+        <button>C</button>
+        <button>()</button>
+        <button>%</button>
+        <button>/</button>
         </div>
-        <div>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>-</button>
-        </div>
-        <div>
+        <div className="wrapper">
         <button>7</button>
         <button>8</button>
         <button>9</button>
         <button>X</button>
         </div>
-        <div>
-        <button>=</button>
-        <button>CE</button>
-        <button>%</button>
-        <button>/</button>
+        <div className="wrapper">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>+</button>
         </div>
+        <div className="Wrapper">
+        <button>+/-</button>
+        <button>0</button>
+        <button>,</button>
+        <button>=</button>
+        </div>
+        </Container>
+        </Box>
     )
 }
