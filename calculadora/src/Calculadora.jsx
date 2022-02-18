@@ -28,6 +28,8 @@ export default function Calculadora() {
     function operatorHandler(params) {
         if(num > 0){
             setNum(-num)
+        }else{
+            setNum(Math.abs)
         }
     }
 
@@ -45,20 +47,20 @@ export default function Calculadora() {
         <button>/</button>
         </div>
         <div className="wrapper">
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
+        <button onClick={inputNum}>7</button>
+        <button onClick={inputNum}>8</button>
+        <button onClick={inputNum}>9</button>
         <button>X</button>
         </div>
         <div className="wrapper">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
+        <button onClick={inputNum}>1</button>
+        <button onClick={inputNum}>2</button>
+        <button onClick={inputNum}>3</button>
         <button>+</button>
         </div>
         <div className="Wrapper">
         <button onClick={operatorHandler}>+/-</button>
-        <button>0</button>
+        <button onClick={inputNum}>0</button>
         <button>,</button>
         <button>=</button>
         </div
