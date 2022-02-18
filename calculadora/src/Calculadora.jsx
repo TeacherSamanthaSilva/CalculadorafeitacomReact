@@ -6,6 +6,18 @@ import Container from '@mui/material/Container';
 
 
 export default function Calculadora() {
+
+    const [num,setNum] = useState(0)
+
+    function inputNum(valor) {
+        setNum(valor)
+        var input = e.target.value
+        setNum(num + input)
+    }
+
+    function clear(e) {
+        setNum(0)
+    }
     return (
         <h1 className="Resultado"></h1>
         <Box>
